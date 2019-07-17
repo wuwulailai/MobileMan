@@ -34,11 +34,11 @@ class ViewController: UIViewController {
         
         print("==============================")
         // CPU信息
-        print("CPU名称 : \(share.totalMemory/1024.0)G")
-        print("CPU型号 : \(share.purgableMemoryinRaw/1024)G")
+        print("CPU名称 : \(share.applicationCPUUsage)")
+        print("CPU型号 : \(share.applicationCPUUsage)")
         print("CPU架构 : \(share.activeMemoryinRaw/1024.0)G")
-        print("CPU核心数 : \(share.inactiveMemoryinRaw/1024)G")
-        print("GPU架构 : \(share.freeMemoryinRaw/1024)G")
+        print("CPU核心数 : \(share.numberProcessors)")
+        print("GPU架构 : \(share.freeMemoryinRaw/1024)")
         print("GPU核心数 : \(share.totalMemory/1024.0)G")
         print("当前CPU主频 : \(share.purgableMemoryinRaw/1024)G")
         print("最大CPU主频 : \(share.activeMemoryinRaw/1024.0)G")
@@ -82,9 +82,9 @@ class ViewController: UIViewController {
         print("可玩游戏 : \(share.inactiveMemoryinRaw/1024)G")
         
         // 存储信息
-        print("存储大小 : \(share.totalMemory/1024.0)G")
-        print("可使用存储 : \(share.purgableMemoryinRaw/1024)G")
-        print("空闲存储 : \(share.activeMemoryinRaw/1024.0)G")
+        print("存储大小 : \(share.diskSpace ?? "")")
+        print("已使用存储 : \(share.usedDiskSpaceinRaw ?? "")")
+        print("空闲存储 : \(share.freeDiskSpaceinRaw ?? "")")
         
         // 网络信息
         
