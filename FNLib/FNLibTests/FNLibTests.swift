@@ -1,15 +1,15 @@
 //
-//  SystemTests.swift
-//  SystemTests
+//  FNLibTests.swift
+//  FNLibTests
 //
-//  Created by wubaolai on 2019/7/17.
+//  Created by wubaolai on 2019/7/26.
 //  Copyright © 2019 wubaolai. All rights reserved.
 //
 
 import XCTest
-@testable import System
+@testable import FNLib
 
-class SystemTests: XCTestCase {
+class FNLibTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -8,13 +8,14 @@
 
 import UIKit
 import SystemServices
+import NetworkTool
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
         // 设备信息
         let share = SystemServices.shared()
         
@@ -66,6 +67,19 @@ class ViewController: UIViewController {
         print("电池电压 : \(share.purgableMemoryinRaw/1024)G")
         print("电池电量 : \(share.activeMemoryinRaw/1024.0)G")
         print("低电模式 : \(share.inactiveMemoryinRaw/1024)G")
+        print("电量百分比 : \(UIDevice.current.batteryLevel * 100)")
+        
+        // UIDevice.current.isBatteryMonitoringEnabled // 电池监控开关
+        // UIDevice.current.batteryState // 电池状态
+        
+        // 获取电量代码
+        UIDevice.current.isBatteryMonitoringEnabled =  true
+        NotificationCenter.default.addObserver(forName: UIDevice.batteryLevelDidChangeNotification,
+                                               object: nil,
+                                               queue: OperationQueue.main) { (notification) in
+                                                print("Battery Level Change")
+                                                print("电池电量：%.2f", UIDevice.current.batteryLevel)
+        }
         
         print("===============================")
         print("实际容量 : \(share.freeMemoryinRaw/1024)G")
@@ -80,6 +94,7 @@ class ViewController: UIViewController {
         print("可听音乐 : \(share.purgableMemoryinRaw/1024)G")
         print("可看电影 : \(share.activeMemoryinRaw/1024.0)G")
         print("可玩游戏 : \(share.inactiveMemoryinRaw/1024)G")
+        print("可玩游戏 : \(UIDevice.current.batteryLevel)")
         
         // 存储信息
         print("存储大小 : \(share.diskSpace ?? "")")
@@ -88,6 +103,7 @@ class ViewController: UIViewController {
         
         // 网络信息
         
+
     }
 
 
@@ -109,4 +125,10 @@ extension ViewController {
         return String(format: "00:%02d:%02d", Min, Sec)
     }
     
+}
+
+// 队列
+extension ViewController {
+    
+ 
 }

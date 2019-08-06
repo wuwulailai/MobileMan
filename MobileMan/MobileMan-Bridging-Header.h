@@ -9,6 +9,5 @@
 #ifndef MobileMan_Bridging_Header_h
 #define MobileMan_Bridging_Header_h
 
-#import "SystemServices.h"
 
 #endif /* MobileMan_Bridging_Header_h */

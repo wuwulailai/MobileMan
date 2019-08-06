@@ -22,6 +22,7 @@ target 'MobileMan' do
   # 网络
   pod 'HandyJSON'
   pod 'Alamofire'
+  pod 'NetworkTool', :path => './LocalPod/NetworkTool/'
   
   # 系统
   pod 'SystemServices'
@@ -47,6 +48,7 @@ target 'MobileMan' do
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
+    pod 'OCMock'
   end
 
   target 'MobileManUITests' do
@@ -62,6 +64,7 @@ post_install do |installer_representation|
       config.build_settings['CLANG_ENABLE_CODE_COVERAGE'] = 'NO'
       config.build_settings['COMPILER_INDEX_STORE_ENABLE'] = 'NO'
       config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['SWIFT_VERSION'] = '5.0'
     end
   end
 end
