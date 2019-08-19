@@ -22,6 +22,8 @@
 		26FCF59122F97D3B00086523 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F647722E96FF900A357AF /* ArticleModel.swift */; };
 		26FCF59222F97D3B00086523 /* ArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F647922E9700C00A357AF /* ArticleResponse.swift */; };
 		26FCF59422F9826B00086523 /* ArticleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCF59322F9826B00086523 /* ArticleConfig.swift */; };
+		26FCF598230A41D200086523 /* EnvConfigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCF596230A41D200086523 /* EnvConfigController.swift */; };
+		26FCF599230A41D200086523 /* EnvConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCF597230A41D200086523 /* EnvConfig.swift */; };
 		D770E9D5C04E881E42FC9F91 /* Pods_MobileManUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882E95DBA6D2841FBBE0AEE7 /* Pods_MobileManUITests.framework */; };
 		F3AABAA923C9DE2E3983704F /* Pods_MobileManTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2ED91B367AEBCF42E586FA /* Pods_MobileManTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		26CEFED022DEE1B000B54BE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26CEFF0722DF222E00B54BE3 /* MobileMan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileMan-Bridging-Header.h"; sourceTree = "<group>"; };
 		26FCF59322F9826B00086523 /* ArticleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleConfig.swift; sourceTree = "<group>"; };
+		26FCF596230A41D200086523 /* EnvConfigController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvConfigController.swift; sourceTree = "<group>"; };
+		26FCF597230A41D200086523 /* EnvConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvConfig.swift; sourceTree = "<group>"; };
 		60F70D9A88094B29D4F3B6FA /* Pods-MobileMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileMan.debug.xcconfig"; path = "Target Support Files/Pods-MobileMan/Pods-MobileMan.debug.xcconfig"; sourceTree = "<group>"; };
 		841DB58F5A8AF787767D5DC0 /* Pods-MobileManTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileManTests.release.xcconfig"; path = "Target Support Files/Pods-MobileManTests/Pods-MobileManTests.release.xcconfig"; sourceTree = "<group>"; };
 		882E95DBA6D2841FBBE0AEE7 /* Pods_MobileManUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileManUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,7 @@
 		26CEFEAD22DEE1AE00B54BE3 /* MobileMan */ = {
 			isa = PBXGroup;
 			children = (
+				26FCF595230A41BD00086523 /* Util */,
 				26FCF59322F9826B00086523 /* ArticleConfig.swift */,
 				267F647722E96FF900A357AF /* ArticleModel.swift */,
 				267F647922E9700C00A357AF /* ArticleResponse.swift */,
@@ -194,6 +199,23 @@
 				26CEFED022DEE1B000B54BE3 /* Info.plist */,
 			);
 			path = MobileManUITests;
+			sourceTree = "<group>";
+		};
+		26FCF595230A41BD00086523 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				26FCF59A230A481600086523 /* EnvConfig */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		26FCF59A230A481600086523 /* EnvConfig */ = {
+			isa = PBXGroup;
+			children = (
+				26FCF597230A41D200086523 /* EnvConfig.swift */,
+				26FCF596230A41D200086523 /* EnvConfigController.swift */,
+			);
+			path = EnvConfig;
 			sourceTree = "<group>";
 		};
 		F860FDDD93F3A6F44222B14E /* Pods */ = {
@@ -452,8 +474,10 @@
 				26FCF59422F9826B00086523 /* ArticleConfig.swift in Sources */,
 				26FCF59022F97D3B00086523 /* ArticleRequest.swift in Sources */,
 				26FCF59222F97D3B00086523 /* ArticleResponse.swift in Sources */,
+				26FCF599230A41D200086523 /* EnvConfig.swift in Sources */,
 				2652064E22E1CAC700D76E85 /* LaunchViewController.swift in Sources */,
 				26CEFEAF22DEE1AE00B54BE3 /* AppDelegate.swift in Sources */,
+				26FCF598230A41D200086523 /* EnvConfigController.swift in Sources */,
 				26FCF59122F97D3B00086523 /* ArticleModel.swift in Sources */,
 				267F644D22E84D2A00A357AF /* MainViewController.swift in Sources */,
 			);
